@@ -1,0 +1,18 @@
+button{
+    width: 70px;
+    color: white;
+    margin: 10px;
+    padding: 7px;
+}
+.bg-green{
+    background-color: #5cb84c ;
+    border: 3px ridge #ffff4c;
+}
+.bg-red{
+    background-color: #f13583 ;
+    border: 3px groove #ffff4c;
+}
+.bg-blue{
+    background-color: #3085f4 ;
+    border: 3px dotted #ffff4c;
+}

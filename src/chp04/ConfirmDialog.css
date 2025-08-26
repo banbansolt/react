@@ -1,0 +1,12 @@
+div{
+    width: 300px;
+    text-align: center;
+
+}
+
+.div-bg-ivory {
+    background-color: #dfdfd3;
+    border: 5px solid #61dafb;
+    border-bottom: 5px solid #282c34;
+    border-right: 5px solid #282c34;
+}
