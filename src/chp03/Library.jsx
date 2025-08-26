@@ -9,6 +9,6 @@ function Library() {
             <Book name="처음 만난 AWS" totalPage={320}/>
         </div>
     );
-}
+ }
 
 export default Library;
