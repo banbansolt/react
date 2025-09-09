@@ -1,11 +1,11 @@
 import React from "react";
 
 function Clock(props) {
-    return (
+    return(
         <div>
-            <h2 className='clock'>{new Date().toLocaleDateString()}</h2>
+            <div className='clock'>{new Date().toLocaleTimeString()}</div>
         </div>
     )
 }
 
-export default Clock
+export default Clock;

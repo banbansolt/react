@@ -11,16 +11,15 @@ import './chp04/Button.css'
 import './chp04/ConfirmDialog.css'
 import Clock from "./chp04/Clock";
 import './chp04/Clock.css'
+import BookList from "./chp05/exam02/BookList";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-setInterval(()=> {
-    root.render(
-        <React.StrictMode>
-            <Clock/>
-        </React.StrictMode>
-    );
-},1000)
+root.render(
+    <React.StrictMode>
+        <BookList />
+    </React.StrictMode>
+);
 
 
 
