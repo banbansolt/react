@@ -1,21 +1,22 @@
 import React from "react";
 import Book from "./Book";
+import './BookList.css'
 
 const books = [
     {
-        title: "다시 깊게 익히는 인사이드 리액트",
-        author: "윤재원",
-        coverImage: "https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791194383376.jpg"
+        title: "The Art of React",
+        author: "김민주",
+        coverImage: "https://image.yes24.com/goods/151041836/XL"
     },
     {
-        title: "그림으로 쉽게 배우는 HTML+CSS+자바스크립트",
-        author: "임지영",
-        coverImage: "https://image.yes24.com/goods/152847458/XL"
+        title: "Learning Javascript by Myself",
+        author: "윤인성",
+        coverImage: "https://image.yes24.com/goods/105863903/XL"
     },
     {
-        title: "밑바닥부터 시작하는 웹 브라우저",
-        author: "파벨 판체카",
-        coverImage: "https://image.yes24.com/goods/153499985/XL"
+        title: "Clean Code",
+        author: "Robert C. Martin",
+        coverImage: "https://image.yes24.com/goods/11681152/XL"
     }
 ];
 
@@ -23,7 +24,7 @@ function BookList() {
     return(
         <div className={"bookListWrapper"}>
             {
-                books.map((book)=>{
+                books.map((book) =>{
                     return(
                         <Book
                             title={book.title}

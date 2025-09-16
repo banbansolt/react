@@ -1,39 +1,36 @@
-.wrapper{
+.wrapper {
     margin: 8px;
-    padding: 12px;
     display: flex;
-    max-width: 350px;
     flex-direction: column;
+    border: 1px solid grey;
     border-radius: 16px;
-    background-color: #eeeeee;
+    background-color: #f9f9f9;
     aspect-ratio: 4/3;
     box-sizing: border-box;
+    align-items: center;
 }
 
-.image{
-    width: 100%;    /* 부모 너비에 맞게 이미지 크기 조정 */
+.image {
     max-width: 200px;
-    height: auto;
     flex-grow: 1;
     border-radius: 8px;
     object-fit: cover;
 }
 
-.contentContainer{
+.contentContainer {
     margin-top: 16px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
-.titleText{
+.titleText {
     color: black;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
 }
 
-.authorText{
-    color: #555555;
+.authorText {
+    color: grey;
     font-size: 14px;
     margin-top: 4px;
 }

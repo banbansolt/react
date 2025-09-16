@@ -3,4 +3,17 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
     padding: 16px;
+    justify-content: center;
+}
+
+@media (max-width: 800px){
+    .bookListWrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px){
+    .bookListWrapper{
+        grid-template-columns: repeat(1, 1fr) ;
+    }
 }
