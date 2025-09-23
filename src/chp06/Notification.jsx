@@ -1,7 +1,7 @@
 import React from "react";
 import "./Notification.css"
 
-class Notification extends React.Componet{
+class Notification extends React.Component{
     constructor(props) {
         super(props);
 

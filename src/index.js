@@ -15,12 +15,13 @@ import BookList from "./chp05/exam02/BookList";
 import CommentList from "./chp05/CommentList";
 import Notification from "./chp06/Notification";
 import Counter from './chp07/exam01/Counter'
+import Accomdate from "./chp07/Accomdate";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <Counter/>
+        <Accomdate/>
     </React.StrictMode>
 );
 
