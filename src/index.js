@@ -13,12 +13,14 @@ import Clock from "./chp04/Clock";
 import './chp04/Clock.css'
 import BookList from "./chp05/exam02/BookList";
 import CommentList from "./chp05/CommentList";
+import Notification from "./chp06/Notification";
+import Counter from './chp07/exam01/Counter'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <CommentList/>
+        <Counter/>
     </React.StrictMode>
 );
 
