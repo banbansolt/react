@@ -16,12 +16,16 @@ import CommentList from "./chp05/CommentList";
 import Notification from "./chp06/Notification";
 import Counter from './chp07/exam01/Counter'
 import Accomdate from "./chp07/Accomdate";
+import Toggle_2 from "./chp08/Toggle_2";
+import ToggleFunction from "./chp08/ToggleFunction";
+import MyButton_Argument from "./chp08/MyButton_Argument";
+import InputTest from "./chp08/InputTest";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <Accomdate/>
+        <InputTest/>
     </React.StrictMode>
 );
 
