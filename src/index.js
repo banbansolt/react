@@ -20,12 +20,15 @@ import Toggle_2 from "./chp08/Toggle_2";
 import ToggleFunction from "./chp08/ToggleFunction";
 import MyButton_Argument from "./chp08/MyButton_Argument";
 import InputTest from "./chp08/InputTest";
+import LoginControl from "./chp09/ex2/LoginControl";
+import MainPageWarning from "./chp09/ex3/MainPageWarning.css";
+import LandingPage from "./chp09/closing_ex/LandingPage";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <InputTest/>
+        <LandingPage />
     </React.StrictMode>
 );
 
