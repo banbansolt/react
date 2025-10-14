@@ -1,4 +1,4 @@
-import React from "react";
+ import React from "react";
 import './MainPage_style.css';
 function WarningBanner(props){
     if(!props.warning){

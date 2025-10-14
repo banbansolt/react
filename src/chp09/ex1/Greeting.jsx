@@ -1,4 +1,4 @@
-import React from "react";
+ import React from "react";
 
 function UserGreeting(props){
     return "<h1>다시 오셨군요~</h1>"

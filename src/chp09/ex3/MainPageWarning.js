@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+ import React, {useState} from "react";
 import WarningBanner from "./WarningBanner";
 
 function MainPageWarning(){
