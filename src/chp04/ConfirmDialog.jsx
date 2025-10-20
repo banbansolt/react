@@ -8,7 +8,7 @@ function ConfirmDialog(props) {
             <br/>
             <Button color='green'>확인</Button>&nbsp;
             <Button color='red'>취소</Button>&nbsp;
-            <Button color='blue'>초기화</Button>&nbsp;
+            <Button color='blue'>초기화</Button>;
         </div>
     )
 }

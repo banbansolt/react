@@ -8,6 +8,7 @@ function Avatar(props) {
             src={props.user.avatarUrl}
         />
     );
+
 }
 
 export default Avatar;

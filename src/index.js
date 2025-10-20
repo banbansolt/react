@@ -7,7 +7,6 @@ import Library from './chp03/Library.jsx'; // 👈 1. Library.jsx 파일에서 L
 import './chp03/book.css';
 import ConfirmDialogs from "./chp04/ConfirmDialogs";
 import ConfirmDialog from "./chp04/ConfirmDialog";
-import './chp04/Button.css'
 import './chp04/ConfirmDialog.css'
 import Clock from "./chp04/Clock";
 import './chp04/Clock.css'
@@ -23,12 +22,19 @@ import InputTest from "./chp08/InputTest";
 import LoginControl from "./chp09/ex2/LoginControl";
 import MainPageWarning from "./chp09/ex3/MainPageWarning.css";
 import LandingPage from "./chp09/closing_ex/LandingPage";
+import Button from "./chp04/Button";
+import './chp04/Button.css'
+import Avatar from "./chp05/exam01/Avatar";
+import Comment from "./chp05/Comment";
+import Book from "./chp05/exam02/Book";
+import NotificationList from "./chp06/NotificationList";
+import ConfirmButtonFunction from "./chp08/ConfirmButtonFunction";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <LandingPage />
+        <ToggleFunction />
     </React.StrictMode>
 );
 

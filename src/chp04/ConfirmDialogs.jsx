@@ -1,13 +1,12 @@
 import React from "react";
-// import Button from "./Button";
-import ConfirmDialog from "./ConfirmDialog"
+import ConfirmDialog from "./ConfirmDialog";
 
-function ConfirmDialogs() {
+function ConfirmDialogs(props){
     return(
-        <div className='div-bg-seashell'>
-            <ConfirmDialog color='ivory'>내용</ConfirmDialog>
-            <ConfirmDialog color='yellow'>설명</ConfirmDialog>
-            <ConfirmDialog color='khaki'>전공</ConfirmDialog>
+        <div>
+            <ConfirmDialog>내용</ConfirmDialog><br/><br/>
+            <ConfirmDialog>설명</ConfirmDialog><br/><br/>
+            <ConfirmDialog>전공</ConfirmDialog><br/><br/>
         </div>
     )
 }

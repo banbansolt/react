@@ -1,12 +1,10 @@
 div{
-    width: 300px;
     text-align: center;
-
+    padding: 20px;
+    width: 300px;
 }
 
-.div-bg-ivory {
-    background-color: #dfdfd3;
-    border: 5px solid #61dafb;
-    border-bottom: 5px solid #282c34;
-    border-right: 5px solid #282c34;
+.div-bg-ivory{
+    background-color: #fdfdf3;
+    border: 5px outset #d2c8ed;
 }
