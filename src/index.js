@@ -29,12 +29,14 @@ import Comment from "./chp05/Comment";
 import Book from "./chp05/exam02/Book";
 import NotificationList from "./chp06/NotificationList";
 import ConfirmButtonFunction from "./chp08/ConfirmButtonFunction";
+import Toggle from "./chp08/Toggle";
+import AttendanceCard from "./chp10/ex3/AttendanceCard";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <ToggleFunction />
+        <Exefile/>
     </React.StrictMode>
 );
 
