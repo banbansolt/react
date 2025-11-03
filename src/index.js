@@ -31,12 +31,16 @@ import NotificationList from "./chp06/NotificationList";
 import ConfirmButtonFunction from "./chp08/ConfirmButtonFunction";
 import Toggle from "./chp08/Toggle";
 import AttendanceCard from "./chp10/ex3/AttendanceCard";
+import Attendance from "./chp10/ex4/Attendance";
+import AppNumberList from "./chp10/ex1/AppNumberList";
+import StudentAttendance from "./chp10/ex2/StudentAttendance";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <Exefile/>
+        <Attendance/>
     </React.StrictMode>
 );
 

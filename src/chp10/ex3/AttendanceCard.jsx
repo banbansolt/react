@@ -1,6 +1,6 @@
 import React from "react";
 import './AttendanceCard.css';
-import img6 from './imgs/6.jpg'
+import img6 from './imgs/06.jpg'
 
 const students = [
     {id: 1, name:"김철수", grade:2, major:"인공지능소프트웨어", avatar: "https://randomuser.me/api/portraits/men/1.jpg"},
