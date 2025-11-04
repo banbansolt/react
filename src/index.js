@@ -34,13 +34,15 @@ import AttendanceCard from "./chp10/ex3/AttendanceCard";
 import Attendance from "./chp10/ex4/Attendance";
 import AppNumberList from "./chp10/ex1/AppNumberList";
 import StudentAttendance from "./chp10/ex2/StudentAttendance";
+import NameForm from "./chp11/ex1/NameForm";
+import FruitSelect from "./chp11/ex2/FruitSelect";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <Attendance/>
+        <FruitSelect/>
     </React.StrictMode>
 );
 

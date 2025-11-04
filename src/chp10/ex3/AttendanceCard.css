@@ -5,9 +5,12 @@
 }
 
 .attendance-title {
+    /* 시각적 강조 및 전문성 추가 */
     text-align: center;
-    color: #333;
-    margin-bottom: 30px;
+    color: #2c3e50; /* 진한 색상 */
+    margin-bottom: 40px;
+    font-size: 2.2em;
+    font-weight: 700;
 }
 
 .card-container {
@@ -23,8 +26,16 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;
     width: 250px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 호버를 위한 transition 추가 */
+    cursor: pointer; /* 클릭 가능함을 시사 */
 }
+
+/* 추가: 마우스 호버 시 상호작용 효과 */
+.student-card:hover {
+    transform: translateY(-5px); /* 살짝 떠오름 */
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2); /* 그림자 강화 */
+}
+
 .student-avatar {
     width: 100%;
     height: 200px;
@@ -36,13 +47,27 @@
 }
 
 .student-info h3{
-    margin: 0;
+    margin: 0 0 5px; /* 아래 여백 추가 */
     color: #333333;
     font-size: 1.2em;
 }
 
 .student-info p{
-    margin: 5px 0 0;
+    margin: 0; /* 위쪽 여백 제거, h3에서 처리 */
     color: #666666;
     font-size: 0.9em;
 }
+
+/* 🎯 추가: 출석 상태를 나타내는 시각적 구분자 */
+.status-present {
+    border-left: 5px solid #2ecc71; /* 초록색 (출석) */
+}
+
+.status-late {
+    border-left: 5px solid #f39c12; /* 주황색 (지각) */
+}
+
+.status-absent {
+    border-left: 5px solid #e74c3c; /* 빨간색 (결석) */
+}
+
