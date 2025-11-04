@@ -9,13 +9,13 @@ import img6 from './imgs/6.jpg'
 import img7 from './imgs/7.jpg'
 
 const moneys = [
-    {id: 1, name:"한국", grade:2, major:"￦(원)", avatar: img1},
-    {id: 2, name:"미국", grade:1, major:"$(달러)", avatar: img2},
-    {id: 3, name:"유럽", grade:2, major:"€(유로)", avatar: img3},
-    {id: 4, name:"중국", grade:2, major:"Y(위안)", avatar: img4},
-    {id: 5, name:"일본", grade:1, major:"￥(엔)", avatar: img5},
-    {id: 6, name:"영국", grade:2, major:"£(파운드)", avatar: img6},
-    {id: 7, name:"터키", grade:2, major:"₺(리라)", avatar: img7},
+    {id: 1, name:"한국",  major:"￦(원)", avatar: img1},
+    {id: 2, name:"미국",  major:"$(달러)", avatar: img2},
+    {id: 3, name:"유럽",  major:"€(유로)", avatar: img3},
+    {id: 4, name:"중국",  major:"Y(위안)", avatar: img4},
+    {id: 5, name:"일본",  major:"￥(엔)", avatar: img5},
+    {id: 6, name:"영국",  major:"£(파운드)", avatar: img6},
+    {id: 7, name:"터키",  major:"₺(리라)", avatar: img7},
 ];
 function Attendance() {
     return(
@@ -24,8 +24,8 @@ function Attendance() {
             <div className={"card-container"}>
                 {
                     moneys.map((money) => (
-                            <div className={"student-card"} key={money.id}>
-                                <img src={money.avatar} alt={money.name} className={"student-avatar"}/>
+                            <div className={"money-card"} key={money.id}>
+                                <img src={money.avatar} alt={money.name} className={"money-avatar"}/>
                                 <div className={"money-info"}>
                                     <h3>{money.name}</h3>
                                     <p>{money.name} - {money.major}</p>
