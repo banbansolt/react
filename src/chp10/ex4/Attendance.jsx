@@ -9,7 +9,7 @@ import img6 from './imgs/6.jpg'
 import img7 from './imgs/7.jpg'
 
 const moneys = [
-    {id: 1, name:"한국",  major:"￦(원)", avatar: img1},
+    {id: 1, name:"한국", major:"￦(원)", avatar: img1},
     {id: 2, name:"미국",  major:"$(달러)", avatar: img2},
     {id: 3, name:"유럽",  major:"€(유로)", avatar: img3},
     {id: 4, name:"중국",  major:"Y(위안)", avatar: img4},
