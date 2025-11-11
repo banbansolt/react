@@ -7,42 +7,16 @@ import Library from './chp03/Library.jsx'; // 👈 1. Library.jsx 파일에서 L
 import './chp03/book.css';
 import ConfirmDialogs from "./chp04/ConfirmDialogs";
 import ConfirmDialog from "./chp04/ConfirmDialog";
-import './chp04/ConfirmDialog.css'
-import Clock from "./chp04/Clock";
-import './chp04/Clock.css'
-import BookList from "./chp05/exam02/BookList";
-import CommentList from "./chp05/CommentList";
-import Notification from "./chp06/Notification";
-import Counter from './chp07/exam01/Counter'
-import Accomdate from "./chp07/Accomdate";
-import Toggle_2 from "./chp08/Toggle_2";
-import ToggleFunction from "./chp08/ToggleFunction";
-import MyButton_Argument from "./chp08/MyButton_Argument";
-import InputTest from "./chp08/InputTest";
-import LoginControl from "./chp09/ex2/LoginControl";
-import MainPageWarning from "./chp09/ex3/MainPageWarning.css";
-import LandingPage from "./chp09/closing_ex/LandingPage";
-import Button from "./chp04/Button";
-import './chp04/Button.css'
-import Avatar from "./chp05/exam01/Avatar";
-import Comment from "./chp05/Comment";
-import Book from "./chp05/exam02/Book";
-import NotificationList from "./chp06/NotificationList";
-import ConfirmButtonFunction from "./chp08/ConfirmButtonFunction";
-import Toggle from "./chp08/Toggle";
-import AttendanceCard from "./chp10/ex3/AttendanceCard";
-import Attendance from "./chp10/ex4/Attendance";
-import AppNumberList from "./chp10/ex1/AppNumberList";
-import StudentAttendance from "./chp10/ex2/StudentAttendance";
-import NameForm from "./chp11/ex1/NameForm";
-import FruitSelect from "./chp11/ex2/FruitSelect";
+
+
+import Reservation from "./chp11/ex3/Reservation";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <FruitSelect/>
+        <ConfirmBoilVerVedict/>
     </React.StrictMode>
 );
 
