@@ -1,0 +1,103 @@
+/* 전체 컨테이너 스타일 */
+.Calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 수직 중앙 정렬을 위해 추가 */
+    justify-content: center;
+
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    min-height: 100vh; /* 뷰포트 높이 전체를 차지하도록 설정 */
+    /* 화면 너비 전체를 사용하도록 설정 */
+    width: 100%;
+}
+
+/* 온도 입력 컴포넌트 (TemperatureInput)들을 감싸는 스타일 */
+/* Calculator 컴포넌트의 자식 <div>에 직접 적용될 수 있습니다. */
+/* 이 div가 두 TemperatureInput을 감싸는 컨테이너라고 가정합니다. */
+.Calculator > div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* 입력 필드 사이의 간격 */
+    width: 90%;
+    max-width: 400px; /* 최대 너비 제한 */
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* TemperatureInput 내부 요소 스타일 */
+/* TemperatureInput.js 내부에 레이블과 입력 필드가 있다고 가정합니다. */
+.TemperatureInput {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.TemperatureInput label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.TemperatureInput input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+/* ---------------------------------------------------- */
+/* --- 섭씨(파랑) 및 화씨(빨강) 포커스 스타일 적용 --- */
+/* ---------------------------------------------------- */
+
+/* 섭씨 입력 필드 (첫 번째 TemperatureInput)의 포커스 스타일: 파란색 */
+/* 기본값과 동일하지만, 명확한 구분을 위해 명시합니다. */
+.Calculator > div .TemperatureInput:nth-of-type(1) input[type="text"]:focus {
+    border-color: #007bff; /* 파란색 */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* 파란색 그림자 */
+}
+
+/* 화씨 입력 필드 (두 번째 TemperatureInput)의 포커스 스타일: 빨간색 */
+.Calculator > div .TemperatureInput:nth-of-type(2) input[type="text"]:focus {
+    border-color: #dc3545; /* 빨간색 */
+    outline: none;
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.5); /* 빨간색 그림자 */
+}
+
+/* 끓는점 판별 결과 (BoilVerdict) 스타일 */
+/* 이 요소에도 BoilVerdict 클래스가 적용되어야 중앙 정렬됩니다. */
+.BoilVerdict {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 물이 끓는 경우의 스타일 */
+.BoilVerdict.boils {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* 물이 끓지 않는 경우의 스타일 */
+.BoilVerdict.not-boils {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}

@@ -4,21 +4,23 @@ import './index.css';
 // import App from './App'; // App은 이제 사용하지 않으므로 주석 처리하거나 지워도 됩니다.
 import reportWebVitals from './reportWebVitals';
 import Library from './chp03/Library.jsx'; // 👈 1. Library.jsx 파일에서 Library 컴포넌트 가져오기
-import './chp03/book.css';
-import ConfirmDialogs from "./chp04/ConfirmDialogs";
-import ConfirmDialog from "./chp04/ConfirmDialog";
 
 
-import Reservation from "./chp11/ex3/Reservation";
-import DistanceInput from "./chp12/ex2_1/DistanceInput";
+
+
+import Calculator from "./chp12/Calculator";
 import DistanceCoverter from "./chp12/ex2_1/DistanceCoverter";
+import FancyBorder from "./chp13/FancyBorder";
+import WelcomeDialog from "./chp13/WelcomDialog";
+import Dialog from "./chp13/Dialog";
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <DistanceCoverter/>
+        <WelcomeDialog />
     </React.StrictMode>
 );
 

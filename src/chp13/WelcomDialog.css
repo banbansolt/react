@@ -1,0 +1,36 @@
+/* 1. FancyBorder 공통 스타일: 모든 테두리 상자에 적용되는 기본 스타일 */
+.FancyBorder {
+    padding: 25px;
+    margin: 20px auto; /* 중앙 정렬 */
+    border-radius: 12px;
+    border: 3px solid; /* 색상은 동적으로 결정 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 은은한 그림자 */
+    max-width: 400px; /* 최대 너비 설정 */
+    text-align: center;
+}
+
+/* 2. FancyBorderblue 클래스: color="blue"인 경우 적용되는 스타일 (WelcomeDialog에서 사용) */
+/* 클래스 이름은 FancyBorder와 blue 사이에 공백이 있어야 합니다. */
+.blue {
+    border-color: #3f51b5; /* 진한 파란색 테두리 */
+    background-color: #e8eaf6; /* 연한 파란색 배경 */
+}
+
+/* 3. Dialog-title 스타일: WelcomeDialog의 제목 */
+.Dialog-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.2em; /* 크게 강조 */
+    color: #303f9f; /* 제목 색상 */
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #c5cae9; /* 제목 아래 구분선 */
+}
+
+/* 4. Dialog-message 스타일: WelcomeDialog의 메시지 */
+.Dialog-message {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1em;
+    color: #424242;
+    line-height: 1.6;
+}
