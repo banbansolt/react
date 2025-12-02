@@ -8,11 +8,14 @@ import Library from './chp03/Library.jsx'; // 👈 1. Library.jsx 파일에서 L
 
 
 
-import Calculator from "./chp12/Calculator";
+import Calculator from "./chp12/h2/Calculator";
 import DistanceCoverter from "./chp12/ex2_1/DistanceCoverter";
-import FancyBorder from "./chp13/FancyBorder";
-import WelcomeDialog from "./chp13/WelcomDialog";
-import Dialog from "./chp13/Dialog";
+import FancyBorder from "./chp12/homework/FancyBorder";
+import WelcomeDialog from "./chp12/homework/WelcomDialog";
+import Dialog from "./chp12/homework/Dialog";
+import ProfileCard from "./chp13/ex1/ProfileCard";
+import Card from "./chp13/ex1/Card";
+import DarkOrLight from "./chp14/DarkOrLight";
 
 
 
@@ -20,7 +23,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <WelcomeDialog />
+        <DarkOrLight />
     </React.StrictMode>
 );
 

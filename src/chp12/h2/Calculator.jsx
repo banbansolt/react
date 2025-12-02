@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import TemperatureInput from "./TemperatureInput";
-import BoilVerdict from "./ex1/BoilVerdict";
+import BoilVerdict from "../ex1/BoilVerdict";
 import './Calculator.css'
 
 
