@@ -1,21 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import App from './App'; // App은 이제 사용하지 않으므로 주석 처리하거나 지워도 됩니다.
+// import LoginApp from './LoginApp'; // App은 이제 사용하지 않으므로 주석 처리하거나 지워도 됩니다.
 import reportWebVitals from './reportWebVitals';
 import Library from './chp03/Library.jsx'; // 👈 1. Library.jsx 파일에서 Library 컴포넌트 가져오기
 
 
 
 
-import Calculator from "./chp12/h2/Calculator";
-import DistanceCoverter from "./chp12/ex2_1/DistanceCoverter";
-import FancyBorder from "./chp12/homework/FancyBorder";
-import WelcomeDialog from "./chp12/homework/WelcomDialog";
-import Dialog from "./chp12/homework/Dialog";
-import ProfileCard from "./chp13/ex1/ProfileCard";
-import Card from "./chp13/ex1/Card";
-import DarkOrLight from "./chp14/DarkOrLight";
+import TravelApp from "./과제/2/TravelApp";
+import LoginApp from "./과제/1/LoginApp";
+import TravelAp from "./과제/3/TravelAp";
+import TravelTip from "./과제/4/TravelTip";
+
 
 
 
@@ -23,7 +20,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <DarkOrLight />
+        <TravelTip/>
     </React.StrictMode>
 );
 

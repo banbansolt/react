@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f2f2f2;
+}
+
+main h2{
+    /* 중앙 정렬을 위해 absolute position 사용 */
+    position: absolute;
+    font-size: 50px;
+    /* 수평 중앙 (가로) */
+    left: 50%;
+
+    /* 수직 중앙 (세로) */
+    top: 43%;
+
+    /* 요소 크기의 50%만큼 다시 이동시켜 정확히 중앙에 오도록 함 */
+    transform: translate(-50%, -50%);
+
+    /* 배경 이미지에 텍스트가 잘 보이도록 설정 (선택 사항) */
+    text-align: center;
+    width: 100%; /* 부모 요소의 너비를 따라가도록 설정 */
+    margin: 0; /* 기본 마진 제거 */
+    padding: 0;
+}
+
+main p {
+    /* 중앙 정렬을 위해 absolute position 사용 */
+    position: absolute;
+    font-size: 30px;
+    /* 수평 중앙 (가로) */
+    left: 50%;
+
+    /* 수직 중앙 (세로) */
+    top: 50%;
+
+    /* 요소 크기의 50%만큼 다시 이동시켜 정확히 중앙에 오도록 함 */
+    transform: translate(-50%, -50%);
+
+    /* 배경 이미지에 텍스트가 잘 보이도록 설정 (선택 사항) */
+    text-align: center;
+    width: 100%; /* 부모 요소의 너비를 따라가도록 설정 */
+    margin: 0; /* 기본 마진 제거 */
+    padding: 0;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px; /* 네비게이션바 높이 기준으로 사용 */
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+/* 🖼️ main 태그 초기화 (인라인 스타일과의 충돌 방지) */
+main {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    /* 내용을 중앙에 정렬하는 flex 속성 유지 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    /* 화면 하단에 고정 */
+    position: fixed;
+    bottom: 0;
+
+    /* 너비 100% 유지 */
+    width: 105%;
+
+    /* left: 0; 속성은 width: 100% 일 때 불필요하므로 제거해도 무방 */
+
+    box-sizing: border-box;
+    z-index: 90;
+}
+
+.nav-container {
+    border-bottom: 1px solid #ddd;
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* ✅ 수정: padding을 10px 0으로 조정 (높이 60px 맞추기 위함) */
+    padding: 20px 0;
+
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.login-button {
+    /* 기존: header 기준 */
+    /* position: absolute; */
+
+    /* ✅ 수정: 뷰포트(브라우저 창) 기준 고정 */
+    position: fixed;
+
+    /* 오른쪽 상단으로 위치 지정 */
+    top: 15px;
+    right: 20px;
+
+    font-size: 14px;
+    padding: 6px 12px;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    /* ✅ 네비게이션바(z-index: 100)와 겹치지 않도록 z-index를 높게 설정 */
+    z-index: 1000;
+}
+
+.login-button:hover {
+    background-color: #005fcc;
+}
+
+.nav-item {
+    font-weight: bold;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.menu-icon {
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+/* --- 로그인 모달 스타일 --- */
+.login-modal {
+    display: none; /* JS/React에서 'flex'로 오버라이드 됨 */
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.login-content {
+    background-color: #fefefe;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.login-content h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-content input[type="text"],
+.login-content input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-content button {
+    background-color: #007aff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-content button:hover {
+    background-color: #005fcc;
+}

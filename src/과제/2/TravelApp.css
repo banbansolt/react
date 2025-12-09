@@ -1,0 +1,204 @@
+/* TravelAp.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f5f5;
+    /* Header 높이(약 60px)만큼 콘텐츠를 아래로 내림 */
+    padding-top: 60px;
+}
+
+/* 1. HEADER: 상단 고정 및 레이아웃 설정 */
+header {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 2. NAV-CONTAINER: 메뉴 디자인, 높이, 중앙 정렬 담당 */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-container li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.nav-item {
+    font-weight: bold;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-item.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #007aff;
+}
+
+.menu-icon {
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+/* 3. MAIN (Hero Section): Flexbox로 텍스트 중앙 정렬 */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    /* ✅ 수정: 카드가 올라올 공간을 아래쪽에 확보 */
+    padding-bottom: 100px;
+}
+
+/* H1/P 간격 조정 */
+main h1 {
+    font-size: 42px;
+    margin: 0 0 250px 0;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+main p {
+    font-size: 18px;
+    margin-top: 5px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+
+/* 4. CARDS: 음수 마진 적용으로 MAIN 영역 위로 올림 */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    /* ✅ 추가: position 속성을 줘야 z-index가 작동합니다. */
+    position: relative;
+    /* ✅ 추가: 높은 z-index로 main(z-index가 없음) 위에 렌더링되도록 강제 */
+    z-index: 5;
+
+    /* 음수 마진을 적용하여 카드를 위로 끌어올립니다. */
+    margin: -380px 20px 40px 20px;
+
+    flex-wrap: wrap;
+}
+
+/* 5. .card 및 .modal 스타일 (유지) */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 320px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #555;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="date"],
+.modal-content input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.modal-buttons button.confirm {
+    background-color: #007aff;
+    color: white;
+}
+
+.modal-buttons button.cancel {
+    background-color: #ccc;
+    color: #333;
+}
