@@ -1,29 +1,24 @@
+/* TravelTip.css */
 
-/* TravelApp.css 파일 내 */
-
+/* 1. Body 및 기본 레이아웃 (여행 가이드에 맞춰 수정) */
 body {
-    margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background-color: #f5f5f5;
-    /* ✅ 수정: 헤더 높이에 맞게 padding-top을 약 30px로 줄입니다. (원래 60px) */
-    padding-top: 30px;
+    background-color: #f7f9fb; /* 원래 HTML에서 가져옴 */
+    margin: 0;
+    /* TravelTip 컴포넌트에는 card 영역이 없으므로 padding-top을 제거하거나, 필요에 따라 조정합니다. */
+    /* 현재는 헤더가 고정되어 있지 않다고 가정하고, body padding-top을 제거합니다. */
+    padding: 0;
+    color: #333;
 }
 
+/* 2. Header 스타일 (여행 가이드에 맞춤) */
 header {
     background-color: #00a8ff;
     color: white;
-    padding: 30px 20px;
+    /* 원래 HTML의 스타일을 따름 */
+    padding: 20px 20px;
+    left: 0;
     text-align: center;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* ✅ 수정: 상하 패딩을 20px에서 10px로 줄여 헤더 크기를 감소 */
-    padding: 10px 0;
-    width: 100%;
-    box-sizing: border-box;
 }
 
 header h1 {
@@ -31,9 +26,24 @@ header h1 {
     font-size: 32px;
 }
 
+/* 3. Navigation Container (이 컴포넌트에서는 필요 없지만, 이전 코드에 있었으므로 주석 처리 또는 제거) */
+/* .nav-container는 TravelApp에서 사용되었던 스타일이므로 여기서는 제거하거나 주석 처리합니다. */
+/*
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+*/
+
+/* 4. Section 및 목록 스타일 */
 section {
     max-width: 800px;
-    margin: 30px auto;
+    margin: 100px auto;
+    padding: 0 20px; /* body의 좌우 패딩을 section으로 이동하여 중앙 정렬 유지 */
 }
 
 h2 {
@@ -49,9 +59,3 @@ ul {
 li {
     margin-bottom: 10px;
 }
-
-/* 원본 HTML에 있었던 .emoji 클래스는 텍스트에 포함된 이모지 자체이므로, 별도로 사용하지 않았습니다. */
-/* .emoji {
-    font-size: 20px;
-    margin-right: 5px;
-} */

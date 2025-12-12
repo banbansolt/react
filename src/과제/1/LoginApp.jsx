@@ -2,8 +2,17 @@ import React, { useState } from 'react';
 import LoginModal from './LoginModal';
 import './LoginApp.css';
 
-// ✅ 1. back.jpg 이미지를 import 합니다. (경로에 따라 수정 필요할 수 있음)
+// ✅ 1. back.jpg 이미지를 import 합니다.
 import mainBackgroundImage from '../imgs/back.jpg';
+
+// 🧭 네비게이션 데이터 및 경로 정의 (외부에 정의되어 있다고 가정)
+const navItems = [
+    { name: "전체메뉴", path: "/LoginApp" },
+    { name: "국내 · 제주", path: "/TravelApp" },
+    { name: "해외여행", path: "/TravelAp" },
+    { name: "여행팁", path: "/TravelTip" },
+    { name: "고객센터", path: "/TravelGuide" },
+];
 
 const LoginApp = () => {
     // 🔑 상태 관리
@@ -39,70 +48,74 @@ const LoginApp = () => {
         alert('로그인 성공!');
     };
 
+    // 🗺️ 네비게이션 이동 처리 함수 (새로 추가)
+    const handleNavigation = (path, e) => {
+        e.preventDefault(); // 기본 <a> 태그 동작 방지
+
+        // 현재 브라우저의 URL을 변경하여 이동합니다.
+        // 실제로는 React Router의 Link나 useNavigate를 사용하는 것이 권장됩니다.
+        window.location.href = path;
+    };
+
     return (
         <>
             {/* 🧭 헤더/네비게이터 영역 */}
-                <header>
-                    {/* 로그인/로그아웃 버튼 */}
-                    <button className="login-button" onClick={handleAuthClick}>
-                        {isLoggedIn ? '로그아웃' : '로그인'}
-                    </button>
+            <header>
+                {/* 로그인/로그아웃 버튼 */}
+                <button className="login-button" onClick={handleAuthClick}>
+                    {isLoggedIn ? '로그아웃' : '로그인'}
+                </button>
 
-                    <div className="nav-container">
-                        <ul>
-                            <li><a href="#" className="nav-item active">전체메뉴</a></li>
-                            <li><a href="#" className="nav-item">국내 · 제주</a></li>
-                            <li><a href="#" className="nav-item">해외여행</a></li>
-                            <li><a href="#" className="nav-item">여행팁</a></li>
-                            <li><a href="#" className="nav-item">고객센터</a></li>
-                        </ul>
-                        <div className="menu-icon">☰</div>
-                    </div>
-                </header>
+                <div className="nav-container">
+                    <ul>
+                        {/* ⭐️ 수정: navItems 배열을 map으로 순회하며 동적으로 렌더링 */}
+                        {navItems.map((item) => (
+                            <li key={item.name}>
+                                <a
+                                    href={item.path}
+                                    // ⭐️ 클릭 시 handleNavigation 함수 호출
+                                    onClick={(e) => handleNavigation(item.path, e)}
+                                    className={`nav-item ${item.name === "전체메뉴" ? "active" : ""}`}
+                                >
+                                    {item.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                    <div className="menu-icon">☰</div>
+                </div>
+            </header>
 
-                {/* 🏖️ 메인 콘텐츠 영역 (이미지 중앙 배치) */}
-                <main style={{
-                    backgroundImage: `url(${mainBackgroundImage})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    color: 'white',
-                    // ... (다른 텍스트 속성 유지) ...
+            {/* 🏖️ 메인 콘텐츠 영역 (이미지 중앙 배치) */}
+            <main style={{
+                backgroundImage: `url(${mainBackgroundImage})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                color: 'white',
+                width: '100vw',
+                boxSizing: 'border-box',
+                height: 'calc(100vh - 123px)',
+                marginTop: '60px',
+                marginBottom: '60px',
+                position: 'relative',
+                margin: 0,
+                padding: 0,
+            }}>
+                <h2>여행선택의 목적지</h2>
+                <p>지금 떠나고 싶은 도시를 찾아보세요</p>
+            </main>
 
-                    // ✅ 가로 너비를 꽉 채우기
-                    width: '100vw',
-                    boxSizing: 'border-box',
+            {/* 🧩 로그인 모달 컴포넌트 */}
+            <LoginModal
+                isOpen={isModalOpen}
+                onClose={closeLoginModal}
+                onLoginSuccess={handleLoginSuccess}
+            />
 
-                    // ✅ 높이: (100vh)에서 푸터 높이(60px)만 제외하고,
-                    //          헤더 높이(60px)는 마진으로 처리합니다.
-                    height: 'calc(100vh - 123px)',
-
-                    // ✅ 수정: 네비게이션 높이(60px)만큼 아래로 내리고,
-                    //          틈을 없애기 위해 1px을 위로 당겨 겹치게 만듭니다.
-                    //          (이전 60px 마진에 -1px을 더하는 효과)
-                    marginTop: '-70px',
-
-                    // 푸터 마진은 유지
-                    marginBottom: '60px',
-
-                    position: 'relative',
-                    margin: 0,
-                    padding: 0,
-                }}>
-                    <h2>여행선택의 목적지</h2>
-                    <p>지금 떠나고 싶은 도시를 찾아보세요</p>
-                </main>
-
-                {/* 🧩 로그인 모달 컴포넌트 */}
-                <LoginModal
-                    isOpen={isModalOpen}
-                    onClose={closeLoginModal}
-                    onLoginSuccess={handleLoginSuccess}
-                />
-
-                {/* 👣 푸터 영역 */}
-                <footer>
-                    © 2025 여행의 모든 것. All rights reserved.
-                </footer>
+            {/* 👣 푸터 영역 */}
+            <footer>
+                © 2025 여행의 모든 것. All rights reserved.
+            </footer>
         </>
     );
 };

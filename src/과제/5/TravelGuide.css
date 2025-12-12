@@ -1,0 +1,103 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    /* 고정된 헤더 아래로 콘텐츠를 밀어내기 위해 충분한 여백 확보 */
+    padding-top: 80px;
+}
+
+header {
+    background-color: #007aff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    /* 콘텐츠를 가리지 않도록 상단 고정 */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* ⭐️ 수정된 부분: <h1> 아래쪽 마진을 추가하여 <p>와 간격을 띄움 */
+header h1 {
+    margin: 0; /* 상단 마진 제거 */
+    margin-bottom: 5px; /* <p>와의 간격 확보 */
+    font-size: 28px;
+}
+
+/* ⭐️ 수정된 부분: <p>의 상단 마진을 줄여 <h1>에 가깝게 붙이고, 헤더의 총 높이에 영향을 덜 주게 함 */
+
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* .faq-item 스타일은 현재 HTML에는 없지만, 원본 스타일 시트에 있었으므로 남겨둡니다. */
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    margin-bottom: 5px;
+    color: #007aff;
+}
+
+.faq-item p {
+    margin: 0;
+    color: #555;
+}
+
+.contact-box {
+    margin-top: 40px;
+    padding: 20px;
+    /* 원본에는 border-top만 있었으나, 명확한 구분을 위해 border-radius 제거 및 padding 추가 */
+}
+
+.contact-info {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+
+label {
+    display: block;
+    margin: 12px 0 4px;
+    font-weight: bold; /* 가독성을 위해 추가 */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box; /* padding이 width에 포함되도록 설정 */
+}
+
+button {
+    background-color: #007aff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005fcc;
+}

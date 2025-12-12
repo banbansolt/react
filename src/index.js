@@ -11,7 +11,7 @@ import Library from './chp03/Library.jsx'; // 👈 1. Library.jsx 파일에서 L
 import TravelApp from "./과제/2/TravelApp";
 import LoginApp from "./과제/1/LoginApp";
 import TravelAp from "./과제/3/TravelAp";
-import TravelTip from "./과제/4/TravelTip";
+
 
 
 
@@ -20,7 +20,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <TravelTip/>
+        <LoginApp/>
     </React.StrictMode>
 );
 
